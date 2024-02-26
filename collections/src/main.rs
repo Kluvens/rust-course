@@ -29,6 +29,7 @@ fn main() {
 
     // LinkedList
     // push back and pop front are fast because they only need to update pointers which takes O(1) time
+    // VecDeque may perform better than LinkedList due to better memory access patterns and cache utilitzation
 
     // HashMap
     // insertion and removal involves computing the hash of the key, determining the appropriate bucket based on this hash, and then 
