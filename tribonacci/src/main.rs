@@ -25,10 +25,13 @@ fn compute_tribonacci(
     // inside the `TribonacciError` struct
     error_msg: String,
 ) -> Result<(), TribonacciError> {
-    let val = size.unwrap();
+    let size = match size {
+        Ok(size_result) => size_result,
+        Err(_) => return Err(TribonacciError(error_msg)),
+    };
 
     let mut tri_vec:Vec<u128> = vec![1, 1, 1];
-    for i in 2..val-1 {
+    for i in 2..size-1 {
         tri_vec.push(tri_vec[i] + tri_vec[i-1] + tri_vec[i-2]);
     }
     println!("Values: {:?}", tri_vec);
