@@ -50,7 +50,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
         .map(|(course, students)| (course, students.len()))
         .unwrap();
 
-    println!("Number of unique students: {}", num_students);
+    println!("Number of students: {}", num_students);
     println!("Most common course: {} with {} students", most_common_course, most_students);
     println!("Least common course: {} with {} students", least_common_course, least_students);
     println!("Average WAM of all students: {:.2}", avg_wam);
