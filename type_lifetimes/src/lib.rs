@@ -10,7 +10,7 @@ pub struct Difference<'a> {
 
 // You will need to add lifetimes
 // to the function and the parameters
-pub fn find_difference<'a, 'b>(sentence1: &'a str, sentence2: &'b str) -> Difference<'a> {
+pub fn find_difference<'a>(sentence1: &'a str, sentence2: &'a str) -> Difference<'a> {
 
     // DO NOT MODIFY BELOW THIS LINE 
 
