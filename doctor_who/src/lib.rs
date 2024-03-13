@@ -1,9 +1,21 @@
+//! Some complementory functions for week 3 exercise caesar
+//! 
+//! Provides ways to shift
+//! There are sevearl advantages:
+//! Easy to use
+//! Code is reusable
+
+/// default shift is 5
 const DEFAULT_SHIFT: i32 = 5;
+/// uppercase a is 65
 const UPPERCASE_A: i32 = 65;
+/// lowercase a is 97
 const LOWERCASE_A: i32 = 97;
+/// alphabet size is 26
 const ALPHABET_SIZE: i32 = 26;
 
-fn caesar_shift(shift_by: Option<i32>, lines: Vec<String>) -> Vec<String> {
+/// A caesar shift function that generates a list of encrypted lines
+pub fn caesar_shift(shift_by: Option<i32>, lines: Vec<String>) -> Vec<String> {
     let shift_number = shift_by.unwrap_or(DEFAULT_SHIFT);
     
     // no idea what this is doing? Ask the forums and/or 
